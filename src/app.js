@@ -1,6 +1,15 @@
 const express = require('express');
 const app = express();
 const connectDb = require('./config/database');
+const FaqRouter = require('./routes/Faqroute');
+
+
+app.use(express.json());
+app.use('/', FaqRouter);
+
+
+
+
 
 
 // Connect to MongoDB
@@ -12,3 +21,5 @@ connectDb()
         console.log("listening on a port 777");
     });
 })
+
+

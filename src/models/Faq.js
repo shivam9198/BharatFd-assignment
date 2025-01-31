@@ -1,30 +1,16 @@
 const mongoose = require('mongoose');
 
 const FaqSchems = new mongoose.Schema({
-    question:{
-        type:String,
-        required:true
-    },
-    question_h1:{
-        type:String,
-        required:true
-    },
-    question_b1:{
-        type:String,
-        required:true
-    },
-    answer:{
-        type:String,
-        required:true
-    },
-    answer_h1:{
-        type:String,
-        required:true
-    },
-    answer_b1:{
-        type:String,
-        required:true
-    }
+   question:{
+    en: {type:String, required:true},
+    hi:{type:String},
+    bn:{type:String}
+   },
+   answer:{
+    en: {type:String, required:true},
+    hi:{type:String},
+    bn:{type:String}
+   }
 },{timestamps:true})
 
 module.exports = mongoose.model('faq',FaqSchems);
