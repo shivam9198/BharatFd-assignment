@@ -21,10 +21,14 @@ faq-system/ ├── models/ # FAQ model │ └── Faq.js # FAQ Schema defi
 Response:{
   "message": "FAQ added successfully"
 }
-2. **Get FAQs** 
-GET /api/faq
+
+2.    **Get FAQs**
+  GET /api/faq
+  
 Query Parameter: lang (default is en)
+
 Example: GET /api/faq?lang=hi
+
 Response:[
   {
     "question": "Node.js क्या है?",
